@@ -2,7 +2,6 @@ package controller;
 
 import java.util.Scanner;
 
-
 public class ThirdController 
 {
 	public void start ()
@@ -31,7 +30,7 @@ public class ThirdController
 		System.out.println(answer);		
 		
 //		inputScanner.close();
-		// closed bc I am still using the InputStream from the keyboard and don't want errors
+		// closed because I am still using the InputStream from the keyboard and don't want errors
 	}
 	
 	private void moreInput()
@@ -57,15 +56,19 @@ public class ThirdController
 	
 	public boolean validInt(String sample)
 	{
+		//declares and initializes a boolean variable to false
 		boolean isValid = false;
 		
 		try
 		{
+			//Tries to convert the text to an integer
 			Integer.parseInt(sample);
 			isValid = true;	
 		}
+		//catches error and tells user error
 		catch(NumberFormatException error)
 		{
+			//tells user what to do
 			System.out.println("You need to type in a number boi!");
 		}
 		
@@ -74,16 +77,19 @@ public class ThirdController
 	
 	public boolean validDouble(String example)
 	{
+		//Declares and initializes a boolean variable to false
 		boolean isValid = false;
-		
 		
 		try
 		{
+			//Tries to convert the number to a double
 			Double.parseDouble(example);
 			isValid = true;
 		}
+		//catches error and tells user oops
 		catch(NumberFormatException oops)
 		{
+			//Tells user what to do to fix oops
 			System.out.println("Only floating point values are accepted AKA a number with a . in it");
 		}
 		
